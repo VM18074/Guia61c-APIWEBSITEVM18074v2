@@ -86,6 +86,7 @@ function guardarProducto() {
   }
 })
 .then(response=>response.json()).then(data=>{productos=data;listarProductos(data)})
+window.alert('Dato con guardado correctamente, vuelva a desplegar la lista de productos');
 return
 }
 
@@ -97,6 +98,7 @@ function eliminarProducto(nfila){
 	{ method:"DELETE"})
 	.then(response=>response.json())
 	.then(data=>{productos=data;listarProductos(data)});
+	window.alert('Dato eliminado correctamente, vuelva a desplegar la lista de productos');
 	return
 }
 
